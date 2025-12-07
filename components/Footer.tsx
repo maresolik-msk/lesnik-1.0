@@ -20,9 +20,9 @@ const Footer: React.FC = () => {
               Ancient wisdom for the modern home. Sustainable essentials rooted in nature.
             </p>
             <div className="flex gap-4">
-              <Instagram className="w-5 h-5 text-forest/60 hover:text-moss cursor-pointer transition-colors" />
-              <Twitter className="w-5 h-5 text-forest/60 hover:text-moss cursor-pointer transition-colors" />
-              <Facebook className="w-5 h-5 text-forest/60 hover:text-moss cursor-pointer transition-colors" />
+              <Instagram className="w-5 h-5 text-forest/60 hover:text-moss hover:scale-110 cursor-pointer transition-all duration-300 ease-quart" />
+              <Twitter className="w-5 h-5 text-forest/60 hover:text-moss hover:scale-110 cursor-pointer transition-all duration-300 ease-quart" />
+              <Facebook className="w-5 h-5 text-forest/60 hover:text-moss hover:scale-110 cursor-pointer transition-all duration-300 ease-quart" />
             </div>
           </div>
 
