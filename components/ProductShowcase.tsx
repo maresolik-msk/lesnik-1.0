@@ -84,7 +84,7 @@ const ProductShowcase: React.FC = () => {
             <div 
               key={product.id}
               className={`group relative flex flex-col transition-all duration-1000 ease-quart ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-24'}`}
-              style={{ transitionDelay: `${200 + idx * 100}ms` }}
+              style={{ transitionDelay: `${150 + idx * 150}ms` }}
             >
               {/* Image Container */}
               <div 
