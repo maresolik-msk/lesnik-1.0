@@ -4,6 +4,10 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    extend: {},
+  },
+  plugins: [],
+  theme: {
     extend: {
       colors: {
         birch: '#F9F7F3',
