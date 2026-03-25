@@ -1,0 +1,6 @@
+<svg width="800" height="1000" viewBox="0 0 800 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="1000" fill="#F0F2EF"/>
+  <path d="M400 300C300 300 250 400 250 500C250 650 300 800 400 800C500 800 550 650 550 500C550 400 500 300 400 300Z" fill="#EAE8E4" stroke="#5A5A40" stroke-width="2"/>
+  <path d="M350 300V250H450V300" stroke="#5A5A40" stroke-width="2"/>
+  <text x="50%" y="950%" font-family="sans-serif" font-size="20" fill="#5A5A40" text-anchor="middle">Clay Stone Vase</text>
+</svg>

@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
         }}
       >
         <img 
-          src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?q=80&w=2070&auto=format&fit=crop" 
+          src="/images/hero-bg.svg" 
           alt="Serene minimal interior with plants" 
           className={`w-full h-full object-cover transition-all duration-[2s] ease-quart ${isLoaded ? 'scale-100 opacity-90' : 'scale-110 opacity-0'}`}
         />

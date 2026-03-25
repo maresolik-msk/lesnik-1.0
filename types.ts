@@ -5,8 +5,13 @@ export interface Product {
   price: number;
   image: string;
   materials: string[];
+  dimensions?: string;
   category: string;
   isNew?: boolean;
+  rating?: number;
+  reviews?: number;
+  badge?: string;
+  color?: string;
 }
 
 export interface Review {

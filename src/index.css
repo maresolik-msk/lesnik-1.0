@@ -1,3 +1,29 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Lora", serif;
+  
+  --color-birch: #F9F7F3;
+  --color-stone: #E7E2D8;
+  --color-moss: #4A5F4F;
+  --color-forest: #0D0D0D;
+  --color-reed: #A6A6A6;
+  --color-sage: #C4D6C6;
+}
+
+@layer base {
+  body {
+    @apply bg-birch text-forest antialiased overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

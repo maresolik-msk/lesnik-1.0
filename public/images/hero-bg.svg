@@ -1,0 +1,11 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1920" height="1080" fill="#EAE8E4"/>
+  <path d="M0 0H1920V1080H0V0Z" fill="url(#paint0_linear)"/>
+  <defs>
+    <linearGradient id="paint0_linear" x1="960" y1="0" x2="960" y2="1080" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5A5A40" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#5A5A40" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+  <text x="50%" y="50%" font-family="serif" font-size="60" fill="#141414" text-anchor="middle" dominant-baseline="middle">Lesnik Interior</text>
+</svg>

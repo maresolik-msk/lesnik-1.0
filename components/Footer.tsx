@@ -1,5 +1,6 @@
 import React from 'react';
 import { Instagram, Twitter, Facebook } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Logo from './Logo';
 
 const Footer: React.FC = () => {
@@ -30,9 +31,11 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="font-sans font-bold text-xs uppercase tracking-widest text-moss mb-6">Shop</h3>
             <ul className="space-y-4 text-sm text-forest/70">
-              {['New Arrivals', 'Kitchen', 'Living', 'Bath', 'Gift Cards'].map(link => (
-                <li key={link}><a href="#" className="hover:text-moss transition-colors">{link}</a></li>
-              ))}
+              <li><Link to="/shop" className="hover:text-moss transition-colors">New Arrivals</Link></li>
+              <li><Link to="/shop?category=kitchen" className="hover:text-moss transition-colors">Kitchen</Link></li>
+              <li><Link to="/shop?category=living" className="hover:text-moss transition-colors">Living</Link></li>
+              <li><Link to="/shop?category=bath" className="hover:text-moss transition-colors">Bath</Link></li>
+              <li><Link to="/shop" className="hover:text-moss transition-colors">Gift Cards</Link></li>
             </ul>
           </div>
 
@@ -40,9 +43,10 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="font-sans font-bold text-xs uppercase tracking-widest text-moss mb-6">Company</h3>
             <ul className="space-y-4 text-sm text-forest/70">
-              {['Our Story', 'Sustainability', 'Journal', 'Contact Us', 'Careers'].map(link => (
-                <li key={link}><a href="#" className="hover:text-moss transition-colors">{link}</a></li>
-              ))}
+              <li><Link to="/our-story" className="hover:text-moss transition-colors">Our Story</Link></li>
+              <li><Link to="/our-story" className="hover:text-moss transition-colors">Sustainability</Link></li>
+              <li><Link to="/journal" className="hover:text-moss transition-colors">Journal</Link></li>
+              <li><Link to="/contact" className="hover:text-moss transition-colors">Contact Us</Link></li>
             </ul>
           </div>
 
@@ -66,8 +70,8 @@ const Footer: React.FC = () => {
         <div className="border-t border-stone/50 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-forest/40">
           <p>&copy; 2024 Lesnik Eco-Home Solutions. All rights reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-moss">Privacy Policy</a>
-            <a href="#" className="hover:text-moss">Terms of Service</a>
+            <Link to="/privacy" className="hover:text-moss">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-moss">Terms of Service</Link>
           </div>
         </div>
       </div>
