@@ -7,7 +7,7 @@ import { Link, Navigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 
 const ProfilePage: React.FC = () => {
-  const { user, logOut } = useAuth();
+  const { user, logOut, signIn } = useAuth();
   const [orders, setOrders] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -35,7 +35,25 @@ const ProfilePage: React.FC = () => {
     return () => unsubscribe();
   }, [user]);
 
-  if (!user) return <Navigate to="/" />;
+  if (!user) {
+    return (
+      <div className="pt-40 pb-20 px-6 md:px-12 max-w-7xl mx-auto min-h-[90vh] flex flex-col items-center justify-center text-center">
+        <div className="w-20 h-20 bg-stone/20 rounded-full flex items-center justify-center mb-8">
+          <UserIcon className="w-10 h-10 text-forest/20" />
+        </div>
+        <h1 className="font-serif text-4xl text-forest mb-4">Your Profile</h1>
+        <p className="text-forest/60 mb-12 max-w-md mx-auto">
+          Sign in to view your order history, manage your account settings, and track your sustainable journey.
+        </p>
+        <button 
+          onClick={() => signIn()}
+          className="bg-forest text-white px-12 py-4 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-moss transition-all duration-300 shadow-xl shadow-forest/10"
+        >
+          Sign In with Google
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className="pt-40 pb-20 px-6 md:px-12 max-w-7xl mx-auto min-h-[90vh]">

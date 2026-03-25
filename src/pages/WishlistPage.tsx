@@ -7,9 +7,27 @@ import { motion, AnimatePresence } from 'motion/react';
 
 const WishlistPage: React.FC = () => {
   const { wishlist, removeFromWishlist, addToCart } = useCart();
-  const { user } = useAuth();
+  const { user, signIn } = useAuth();
 
-  if (!user) return <Navigate to="/" />;
+  if (!user) {
+    return (
+      <div className="pt-40 pb-20 px-6 md:px-12 max-w-7xl mx-auto min-h-[80vh] flex flex-col items-center justify-center text-center">
+        <div className="w-20 h-20 bg-stone/20 rounded-full flex items-center justify-center mb-8">
+          <Heart className="w-10 h-10 text-forest/20 fill-forest/5" />
+        </div>
+        <h1 className="font-serif text-4xl text-forest mb-4">Your Wishlist</h1>
+        <p className="text-forest/60 mb-12 max-w-md mx-auto">
+          Sign in to save your favorite sustainable essentials and keep track of them for later.
+        </p>
+        <button 
+          onClick={() => signIn()}
+          className="bg-forest text-white px-12 py-4 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-moss transition-all duration-300 shadow-xl shadow-forest/10"
+        >
+          Sign In with Google
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className="pt-40 pb-20 px-6 md:px-12 max-w-7xl mx-auto min-h-[80vh]">

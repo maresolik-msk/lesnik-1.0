@@ -1,11 +1,13 @@
 import React from 'react';
 import { useCart } from '../contexts/CartContext';
-import { Trash2, Plus, Minus, ArrowRight, ShoppingBag } from 'lucide-react';
+import { useAuth } from '../contexts/AuthContext';
+import { Trash2, Plus, Minus, ArrowRight, ShoppingBag, LogIn } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 
 const CartPage: React.FC = () => {
   const { cart, removeFromCart, updateQuantity } = useCart();
+  const { user, signIn } = useAuth();
 
   const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
   const shipping = subtotal > 200 ? 0 : 15;
@@ -98,13 +100,23 @@ const CartPage: React.FC = () => {
               </div>
             </div>
             
-            <Link 
-              to="/checkout"
-              className="w-full bg-forest text-white py-4 rounded-xl font-bold uppercase tracking-widest text-sm hover:bg-moss transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-forest/10"
-            >
-              Proceed to Checkout
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+            {user ? (
+              <Link 
+                to="/checkout"
+                className="w-full bg-forest text-white py-4 rounded-xl font-bold uppercase tracking-widest text-sm hover:bg-moss transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-forest/10"
+              >
+                Proceed to Checkout
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            ) : (
+              <button 
+                onClick={() => signIn()}
+                className="w-full bg-moss text-white py-4 rounded-xl font-bold uppercase tracking-widest text-sm hover:bg-forest transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-moss/10"
+              >
+                Sign In to Checkout
+                <LogIn className="w-4 h-4" />
+              </button>
+            )}
             
             <p className="mt-6 text-center text-xs text-forest/40 leading-relaxed">
               Shipping and taxes calculated at checkout. Free shipping on orders over $200.
