@@ -3,64 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lesnik Eco-Home | Beautiful Essentials</title>
+    <title>Lesnik Eco-Home</title>
+
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  </head>
 
-    <style>
-      body {
-        background-color: #F9F7F3;
-        color: #0D0D0D;
-        -webkit-font-smoothing: antialiased;
-        overflow-x: hidden;
-      }
-      /* Hide scrollbar for clean horizontal scroll */
-      .no-scrollbar::-webkit-scrollbar {
-        display: none;
-      }
-      .no-scrollbar {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
-      
-      /* Reveal Animation Utilities */
-      .reveal-container {
-        overflow: hidden;
-        display: block;
-      }
-      .reveal-text {
-        transform: translateY(110%);
-        transition: transform 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
-        display: block;
-      }
-      .reveal-text.visible {
-        transform: translateY(0);
-      }
-      
-      .image-scale-container {
-        overflow: hidden;
-      }
-      .image-scale {
-        transform: scale(1.15);
-        transition: transform 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-      }
-      .image-scale.visible {
-        transform: scale(1);
-      }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.1/",
-    "react": "https://aistudiocdn.com/react@^19.2.1",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0"
-  }
-}
-</script>
-</head>
   <body>
     <div id="root"></div>
+
+    <!-- THIS LINE IS CRITICAL -->
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
